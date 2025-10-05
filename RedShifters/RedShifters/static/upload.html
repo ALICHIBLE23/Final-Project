@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk Upload - Exoplanet Discovery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <video autoplay muted loop playsinline id="bg-video">
+  <source src="./media/Untitled video - Made with Clipchamp.mp4" type="video/mp4" />
+</video>
+    <nav class="navbar">
+        <div class="logo">
+             <img src="media/logo.png" alt="Site Logo" class="logo-img">
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html"><span class="nav-number">00</span> HOME</a></li>
+            <li><a href="search.html"><span class="nav-number">01</span> SEARCH</a></li>
+            <li><a href="upload.html" class="active"><span class="nav-number">02</span> UPLOAD</a></li>
+            <li><a href="database.html"><span class="nav-number">03</span> DATABASE</a></li>
+            <li><a href="top10.html"><span class="nav-number">04</span> TOP 10</a></li>
+        </ul>
+    </nav>
+
+    <main class="upload-page">
+        <div class="page-header">
+            <h2><span class="page-number">02</span> BULK VERIFICATION</h2>
+        </div>
+
+        <div class="upload-container">
+            <div class="upload-box" id="uploadBox">
+                <svg class="upload-icon" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                <h3>Upload Excel File</h3>
+                <p>Drag and drop your Excel file here or click to browse</p>
+                <input type="file" id="fileInput" accept=".xlsx,.xls,.csv" hidden>
+                <button class="browse-button" onclick="document.getElementById('fileInput').click()">BROWSE FILES</button>
+            </div>
+
+            <div id="uploadResults" class="upload-results hidden">
+                <h3>Processing Results</h3>
+                <div id="resultsContent"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="upload.js"></script>
+    <footer class="site-footer">
+  <div class="footer-inner">
+    <p>© <span id="year"></span> Exoplanet Discovery</p>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="search.html">Search</a>
+      <a href="upload.html">Upload</a>
+      <a href="database.html">Database</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

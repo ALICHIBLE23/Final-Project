@@ -1,0 +1,25 @@
+{
+  "name": "my-v0-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "echo 'no build script'",
+    "start": "node server.js"
+  },
+  "description": "A web application for searching and verifying exoplanets with AI integration.",
+  "main": "database.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.12.2",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.2.0",
+    "csv-writer": "^1.6.0",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.37.0"
+  }
+}

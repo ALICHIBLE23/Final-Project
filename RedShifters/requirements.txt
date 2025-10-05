@@ -1,0 +1,10 @@
+pandas            
+numpy             
+scikit-learn    
+joblib           
+matplotlib      
+seaborn         
+scikit-learn==1.7.1
+lightkurve 
+flask
+jsonify

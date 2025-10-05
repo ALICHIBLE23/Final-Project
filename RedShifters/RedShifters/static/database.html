@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmed Planets Database</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="./media/Untitled video - Made with Clipchamp.mp4" type="video/mp4" />
+    </video>
+    
+    <nav class="navbar">
+        <div class="logo">
+             <img src="media/logo.png" alt="Site Logo" class="logo-img">
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html"><span class="nav-number">00</span> HOME</a></li>
+            <li><a href="search.html"><span class="nav-number">01</span> SEARCH</a></li>
+            <li><a href="upload.html"><span class="nav-number">02</span> UPLOAD</a></li>
+            <li><a href="database.html" class="active"><span class="nav-number">03</span> DATABASE</a></li>
+            <li><a href="top10.html"><span class="nav-number">04</span> TOP 10</a></li>
+        </ul>
+    </nav>
+
+    <main class="database-page">
+        <div class="page-header">
+            <h2><span class="page-number">03</span> CONFIRMED EXOPLANETS</h2>
+        </div>
+
+        <div class="database-container">
+            <div class="database-controls">
+                <input type="text" id="searchInput" placeholder="Search by planet name..." class="search-input">
+                <span id="planetCount" class="planet-count">Loading...</span>
+            </div>
+
+            <div id="planetsTable" class="planets-table">
+                <div class="loading">Loading confirmed planets...</div>
+            </div>
+        </div>
+    </main>
+
+     Added modal for planet details with NASA image 
+    <div id="planetModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody">
+                <div class="loading">Loading planet details...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="database.js"></script>
+    
+     Added footer 
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>© <span id="year"></span> Exoplanet Discovery</p>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="search.html">Search</a>
+                <a href="upload.html">Upload</a>
+                <a href="database.html">Database</a>
+            </nav>
+        </div>
+    </footer>
+    
+    <script></script>
+</body>
+</html>

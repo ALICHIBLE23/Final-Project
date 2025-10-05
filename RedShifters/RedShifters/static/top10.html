@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Likely Planets</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <video autoplay muted loop playsinline id="bg-video">
+  <source src="./media/Untitled video - Made with Clipchamp.mp4" type="video/mp4" />
+</video>
+    <nav class="navbar">
+        <div class="logo">
+             <img src="media/logo.png" alt="Site Logo" class="logo-img">
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html"><span class="nav-number">00</span> HOME</a></li>
+            <li><a href="search.html"><span class="nav-number">01</span> SEARCH</a></li>
+            <li><a href="upload.html"><span class="nav-number">02</span> UPLOAD</a></li>
+            <li><a href="database.html"><span class="nav-number">03</span> DATABASE</a></li>
+            <li><a href="top10.html" class="active"><span class="nav-number">04</span> TOP 10</a></li>
+        </ul>
+    </nav>
+
+    <main class="database-page">
+        <div class="page-header">
+            <h2><span class="page-number">04</span> TOP 10 LIKELY PLANETS</h2>
+        </div>
+
+        <div class="database-container">
+            <div class="database-controls">
+                <p class="planet-count">Most searched unconfirmed planet candidates</p>
+            </div>
+
+            <div class="planets-table">
+                <div id="loadingTop10" class="loading">Loading candidate planets...</div>
+                <div id="top10Content" style="display: none;">
+                    <div id="noCandidates" style="display: none; text-align: center; padding: 3rem; color: var(--color-light);">
+                        <h3 style="font-family: 'Bellefair', serif; font-size: 2rem; color: var(--color-white); margin-bottom: 1rem;">
+                            No Candidate Planets Yet
+                        </h3>
+                        <p>Start searching for planets to see likely candidates appear here!</p>
+                        <a href="search.html" style="display: inline-block; margin-top: 2rem; padding: 1rem 2rem; background: var(--color-white); color: var(--color-dark); text-decoration: none; border-radius: 6px; font-weight: 700; letter-spacing: 2px;">
+                            SEARCH NOW
+                        </a>
+                    </div>
+                    <div id="candidatesList"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="top10.js"></script>
+    <footer class="site-footer">
+  <div class="footer-inner">
+    <p>© <span id="year"></span> Exoplanet Discovery</p>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="search.html">Search</a>
+      <a href="upload.html">Upload</a>
+      <a href="database.html">Database</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

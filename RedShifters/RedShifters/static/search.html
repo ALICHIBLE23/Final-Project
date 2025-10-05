@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Exoplanet - Manual Input</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="./media/Untitled video - Made with Clipchamp.mp4" type="video/mp4" />
+    </video>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="media/logo.png" alt="Site Logo" class="logo-img">
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html"><span class="nav-number">00</span> HOME</a></li>
+            <li><a href="search.html" class="active"><span class="nav-number">01</span> SEARCH</a></li>
+            <li><a href="upload.html"><span class="nav-number">02</span> UPLOAD</a></li>
+            <li><a href="database.html"><span class="nav-number">03</span> DATABASE</a></li>
+            <li><a href="top10.html"><span class="nav-number">04</span> TOP 10</a></li>
+        </ul>
+    </nav>
+
+    <main class="search-page">
+        <div class="page-header">
+            <h2><span class="page-number">01</span> VERIFY YOUR DISCOVERY</h2>
+        </div>
+
+        <div class="search-container">
+            <form id="planetForm" class="planet-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="planetName">Planet Name</label>
+                        <input type="text" id="planetName" name="Planet_name" placeholder="e.g., Kepler-999 b">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="orbitalPeriod">Orbital Period (days)</label>
+                        <input type="number" step="any" id="orbitalPeriod" name="orbital_period" placeholder="e.g., 4.48559215">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="transitDuration">Transit Duration (hours)</label>
+                        <input type="number" step="any" id="transitDuration" name="Transit_duration" placeholder="e.g., 0.8161">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="transitDepth">Transit Depth (ppm)</label>
+                        <input type="number" step="any" id="transitDepth" name="Transit_depth" placeholder="e.g., 2270">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="planetRadius">Planet Radius (Earth radii)</label>
+                        <input type="number" step="any" id="planetRadius" name="Planet_radius" placeholder="e.g., 0.95">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="insolationFlux">Insolation Flux</label>
+                        <input type="number" step="any" id="insolationFlux" name="Insolation_flux" placeholder="e.g., 4.2">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="equilibriumTemp">Equilibrium Temperature (K)</label>
+                        <input type="number" step="any" id="equilibriumTemp" name="Equilibrium_temp" placeholder="e.g., 365">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="magnitude">Magnitude</label>
+                        <input type="number" step="any" id="magnitude" name="Magnitude" placeholder="e.g., 15.737">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="stellarTemp">Stellar Temperature (K)</label>
+                        <input type="number" step="any" id="stellarTemp" name="Stellar_temperature" placeholder="e.g., 3236">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="stellarGravity">Stellar Surface Gravity</label>
+                        <input type="number" step="any" id="stellarGravity" name="Stellar_surface_gravity" placeholder="e.g., 5.097">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="stellarRadius">Stellar Radius (Solar radii)</label>
+                        <input type="number" step="any" id="stellarRadius" name="Stellar_radius" placeholder="e.g., 0.193">
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button">VERIFY PLANET</button>
+            </form>
+
+            <div id="resultContainer" class="result-container hidden">
+                <div id="resultContent" class="result-content"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="search.js"></script>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>© <span id="year"></span> Exoplanet Discovery</p>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="search.html">Search</a>
+                <a href="upload.html">Upload</a>
+                <a href="database.html">Database</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Verification & Light Curve Viewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="./media/Untitled video - Made with Clipchamp.mp4" type="video/mp4" />
+    </video>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="media/logo.png" alt="Site Logo" class="logo-img">
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html"><span class="nav-number">00</span> HOME</a></li>
+            <li><a href="search.html"><span class="nav-number">01</span> SEARCH</a></li>
+            <li><a href="upload.html"><span class="nav-number">02</span> UPLOAD</a></li>
+            <li><a href="database.html"><span class="nav-number">03</span> DATABASE</a></li>
+            <li><a href="top10.html"><span class="nav-number">04</span> TOP 10</a></li>
+        </ul>
+    </nav>
+
+    <main class="search-page">
+        <div class="page-header">
+            <h2><span class="page-number">05</span> AI VERIFICATION RESULT</h2>
+        </div>
+        <div class="search-container">
+            <div id="aiResultContainer" class="result-container">
+                <div id="aiResultContent" class="result-content loading">
+                    Loading AI prediction...
+                </div>
+            </div>
+        </div>
+
+        <div class="page-header" style="margin-top:2rem;">
+            <h2><span class="page-number">06</span> LIGHT CURVE VIEWER</h2>
+        </div>
+        <div class="lightcurve-container" style="text-align:center; margin-bottom:2rem;">
+            <h3 id="planetTitle">Loading planet data...</h3>
+            <p class="loading-text" id="statusText">Generating light curve...</p>
+            <img id="curveImage" alt="Light Curve" style="display:none; margin-top: 2rem; max-width: 90%; border-radius: 10px;">
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>© <span id="year"></span> Exoplanet Discovery</p>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="search.html">Search</a>
+                <a href="upload.html">Upload</a>
+                <a href="database.html">Database</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="verify.js"></script>
+</body>
+</html>
